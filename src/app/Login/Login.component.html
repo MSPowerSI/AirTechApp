@@ -1,0 +1,9 @@
+<div *ngIf="notifyMessage">{{ notifyMessage }}</div>
+<div *ngIf="user">Olá, {{user.firstName}}</div>
+
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+
+  <input type="email" placeholder="Usuário" formControlName="username">
+  <input type="password" placeholder="Senha" formControlName="password">
+  <input type="submit">
+</form>

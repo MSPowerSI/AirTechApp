@@ -1,0 +1,20 @@
+<div *ngIf="notifyMessage">{{notifyMessage}}</div>
+
+<form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+
+  <input type="text" placeholder="CPF" formControlName="taxIdNumber">
+  <br>
+  <input type="text" placeholder="Nome Completo" formControlName="name">
+  <br>
+  <input type="text" placeholder="Data de Nascimento" formControlName="birthDate">
+  <br>
+  <input type="text" placeholder="Genero" formControlName="genre">
+  <br>
+  <input type="text" placeholder="Telefone" formControlName="phoneNumber">
+  <br>
+  <input type="email" placeholder="Email" formControlName="email">
+  <br>
+  <input type="password" placeholder="Senha" formControlName="password">
+  <br>
+  <input type="submit">
+</form>
