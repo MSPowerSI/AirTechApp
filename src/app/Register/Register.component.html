@@ -1,20 +1,46 @@
-<div *ngIf="notifyMessage">{{notifyMessage}}</div>
+<div class="registrar">
 
-<form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+  <div class="heading">
+    <div *ngIf="notifyMessage">{{ notifyMessage }}</div>
 
-  <input type="text" placeholder="CPF" formControlName="taxIdNumber">
-  <br>
-  <input type="text" placeholder="Nome Completo" formControlName="name">
-  <br>
-  <input type="text" placeholder="Data de Nascimento" formControlName="birthDate">
-  <br>
-  <input type="text" placeholder="Genero" formControlName="genre">
-  <br>
-  <input type="text" placeholder="Telefone" formControlName="phoneNumber">
-  <br>
-  <input type="email" placeholder="Email" formControlName="email">
-  <br>
-  <input type="password" placeholder="Senha" formControlName="password">
-  <br>
-  <input type="submit">
-</form>
+    <h2>Registrar</h2>
+
+    <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+
+      <div class="input-group input-group-lg">
+        <input type="text" placeholder="CPF" formControlName="taxIdNumber">
+      </div>
+
+      <div class="input-group input-group-lg">
+        <input type="text" placeholder="Nome Completo" formControlName="name">
+      </div>
+
+      <div class="input-group input-group-lg">
+        <input type="text" placeholder="Data de Nascimento" formControlName="birthDate">
+      </div>
+
+      <div class="input-group input-group-lg">
+        <input type="text" placeholder="Genero" formControlName="genre">
+      </div>
+
+      <div class="input-group input-group-lg">
+        <input type="text" placeholder="Telefone" formControlName="phoneNumber">
+      </div>
+
+      <div class="input-group input-group-lg">
+        <input type="email" placeholder="Email" formControlName="email">
+      </div>
+
+      <div class="input-group input-group-lg">
+        <input type="password" placeholder="Senha" formControlName="password">
+      </div>
+
+      <input class="enviar" type="submit">
+    </form>
+
+    <div class="login">
+      <a href="/login">Login</a>
+    </div>
+  </div>
+</div>
+

@@ -1,9 +1,24 @@
-<div *ngIf="notifyMessage">{{ notifyMessage }}</div>
-<div *ngIf="user">Olá, {{user.firstName}}</div>
+<div class="login">
 
-<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+  <div class="heading">
+    <div *ngIf="notifyMessage">{{ notifyMessage }}</div>
+    <div *ngIf="user">Olá, {{user.firstName}}</div>
 
-  <input type="email" placeholder="Usuário" formControlName="username">
-  <input type="password" placeholder="Senha" formControlName="password">
-  <input type="submit">
-</form>
+    <h2>Login</h2>
+
+    <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+
+      <div class="input-group input-group-lg">
+        <input type="email" placeholder="Usuário" formControlName="username">
+      </div>
+      <div class="input-group input-group-lg">
+        <input type="password" placeholder="Senha" formControlName="password">
+      </div>
+        <input class="enviar" type="submit">
+    </form>
+
+    <div class="register">
+      <a href="/register">Registrar</a>
+    </div>
+  </div>
+</div>
